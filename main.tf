@@ -103,7 +103,7 @@ resource "aws_elb" "my-elb" {
 
   # The instance is registered automatically
 
-  instances                   = ["${aws_instance.my-app-server1.id}", "${aws_instance.my-app-server2.id}"]
+  instances                   = ["${aws_instance.my-jetty-server1.id}", "${aws_instance.my-jetty-server2.id}"]
   cross_zone_load_balancing   = true
   idle_timeout                = 400
   connection_draining         = true
@@ -236,10 +236,10 @@ output "elb_dns" {
 }
 
 output "public_ip_1" {
-  value = "${aws_instance.my-app-server1.public_ip}"
+  value = "${aws_instance.my-jetty-server1.public_ip}"
 }
 
 output "public_ip_2" {
-  value = "${aws_instance.my-app-server2.public_ip}"
+  value = "${aws_instance.my-jetty-server2.public_ip}"
 }
 
