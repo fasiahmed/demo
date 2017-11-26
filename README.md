@@ -33,11 +33,11 @@ step 8: restart the nginx server
 
 main.tf
 -------------
-   provider:           AWS  \n
-   availablilityzone:  eu-central-1b  \n
-   vpc:       172.16.0.0/16       \n
-   subnet:    172.16.10.0/24       \n
-   instances: server1 and server2   \n
+   provider:           AWS  
+   availablilityzone:  eu-central-1b  
+   vpc:       172.16.0.0/16       
+   subnet:    172.16.10.0/24      
+   instances: server1 and server2 
 
 
 
