@@ -1,4 +1,4 @@
-Provisioner.sh file
+Provisioning.sh file
 ---------------------------
 This is an executable file which execute the software in the EC2 instaces
 
@@ -31,7 +31,7 @@ step 7: create a softlink to default
 step 8: restart the nginx server
         sudo /etc/init.d/ngnix restart
 
-main.tf
+main.tf  apply by terraform
 -------------
    provider:           AWS  
    availablilityzone:  eu-central-1b  
