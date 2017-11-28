@@ -41,5 +41,6 @@ sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 #### ====> Restart the jetty webserver and ngnix service after cp the default file
 sudo java -jar ../start.jar &
+sleep 30
 sudo service nginx restart
 
