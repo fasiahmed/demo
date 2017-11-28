@@ -124,16 +124,16 @@ resource "aws_instance" "my-jetty-server1" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = "${file("/home/ubuntu/smavakey.pem")}"
+    private_key = "${file("/root/.jenkins/workspace/jettyporject/smavakey.pem")}"
   }
   provisioner "file" {
     source      = "provisioning.sh"
-    destination = "/home/ubuntu/provisioning.sh"
+    destination = "/root/.jenkins/workspace/jettyporject/provisioning.sh"
   }
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /home/ubuntu/provisioning.sh",
-      "/home/ubuntu/provisioning.sh",
+      "chmod +x /root/.jenkins/workspace/jettyporject/provisioning.sh",
+      "/root/.jenkins/workspace/jettyporject/provisioning.sh",
     ]
   }
   tags {
@@ -152,18 +152,18 @@ resource "aws_instance" "my-jetty-server2" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = "${file("/Users/ksaxena/scale/smavakey.pem")}"
+    private_key = "${file("/root/.jenkins/workspace/jettyporject/smavakey.pem")}"
   }
 
   provisioner "file" {
     source      = "provisioning.sh"
-    destination = "/home/ubuntu/provisioning.sh"
+    destination = "/root/.jenkins/workspace/jettyporject/provisioning.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /home/ubuntu/provisioning.sh",
-      "/home/ubuntu/provisioning.sh",
+      "chmod +x /root/.jenkins/workspace/jettyporject/provisioning.sh",
+      "/root/.jenkins/workspace/jettyporject/provisioning.sh",
     ]
   }
 
