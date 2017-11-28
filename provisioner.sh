@@ -26,7 +26,7 @@ sudo java -jar ../start.jar &
 #### ====> Copy the builds to respective folders of tw-docker-infra for use in docker containers
 sudo rm -f /etc/nginx/sites-available/default
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo cp /home/ubuntu/default /etc/nginx/sites-available/default
+sudo cp default /etc/nginx/sites-available/default
 sleep 10
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sleep 20                           # Wait until the builds are copied
