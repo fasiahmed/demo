@@ -9,8 +9,8 @@ sleep 10
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 # preaccept Oracle license
-sudo echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-sudo echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 #install the java8
 sudo apt-get -y install oracle-java8-installer
 sudo java -version
