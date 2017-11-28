@@ -1,8 +1,9 @@
 ##### ========== Declaring cloud provider ========== #####
 provider "aws" {
-  region = "eu-central-1"
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
+  region     = "eu-central-1"
 }
-
 ##### ========== Defining availability zone ========== #####
 data "aws_availability_zone" "my-zone" {
   name = "eu-central-1b"
